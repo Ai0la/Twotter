@@ -7,39 +7,41 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="nav">
-      <h1 class="logo">Twotter</h1>
-      <div class="auth-buttons">
-        <a href="login.html" class="btn">Log in</a>
+  <div class="page-wrapper">
+    <header>
+      <div class="nav">
+        <h1 class="logo">Twotter</h1>
+        <div class="auth-buttons">
+          <a href="login.html" class="btn">Log in</a>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main class="form-page">
-    <section class="form-container">
-      <h2>Create your account</h2>
-      <form action="#" method="post">
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username" required>
+    <main class="form-page">
+      <section class="form-container">
+        <h2>Create your account</h2>
+        <form action="#" method="post" class="signup-form">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
 
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
 
-        <label for="confirm-password">Confirm Password</label>
-        <input type="password" id="confirm-password" name="confirm-password" required>
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirm-password" required>
 
-        <button type="submit" class="btn btn-lg">Sign up</button>
-      </form>
-      <p>Already have an account? <a href="login.html">Log in here</a></p>
-    </section>
-  </main>
+          <button type="submit" class="btn btn-lg">Sign up</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Log in here</a></p>
+      </section>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Twotter. Not affiliated with any real bird-based websites.</p>
-  </footer>
+    <footer>
+      <p>&copy; 2025 Twotter. Not affiliated with any real bird-based websites.</p>
+    </footer>
+  </div>
 </body>
 </html>
