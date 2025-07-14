@@ -1,104 +1,87 @@
-/* styles.css */
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* hero split layout */
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-body {
-  font-family: sans-serif;
-  background-color: #f5f8fa;
-  color: #14171a;
+/* left side text */
+.hero-left h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.features {
+  list-style: none;
+  margin-top: 1rem;
+}
+.features li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+.features li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #1da1f2;
+}
+
+/* right side signup panel */
+.signup-panel {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+.signup-panel h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.signup-form input {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccd6dd;
+  border-radius: 4px;
+}
+.signup-form input:focus {
+  outline: none;
+  border-color: #1da1f2;
+}
+.signup-form .btn-lg {
+  width: 100%;
+}
+
+/* ensure footer sticks to bottom */
+.page-wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-
-header {
-  background-color: #1da1f2;
-  color: white;
-  padding: 1rem 2rem;
+main {
+  flex: 1;
 }
-
-.nav {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.auth-buttons a {
-  margin-left: 1rem;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background 0.2s;
-}
-
-.btn {
-  background-color: white;
-  color: #1da1f2;
-}
-
-.btn:hover {
-  background-color: #e8f5fe;
-}
-
-.btn-outline {
-  background-color: transparent;
-  border: 2px solid white;
-  color: white;
-}
-
-.btn-outline:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-}
-
-main.hero {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.hero-text h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero-text p {
-  font-size: 1.1rem;
-  margin: 0.5rem 0;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.cta-buttons {
-  margin-top: 2rem;
-}
-
-.cta-buttons .btn-lg {
-  display: inline-block;
-  margin: 0.5rem;
-  font-size: 1rem;
-  padding: 0.75rem 1.5rem;
-}
-
 footer {
+  flex-shrink: 0;
   background-color: #e1e8ed;
   padding: 1rem;
   text-align: center;
   font-size: 0.9rem;
   color: #657786;
+}
+
+/* mobile responsiveness */
+@media (max-width: 768px) {
+  .hero-split {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-right {
+    margin-top: 2rem;
+  }
 }
